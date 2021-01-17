@@ -32,8 +32,7 @@ export default {
       this.todos = [...this.todos, newTodo];
     },
     created() {
-      axios
-        .get('https://jsonplaceholder.typicode.com/todos')
+      axios.get('https://jsonplaceholder.typicode.com/todos')
         .then(res => this.todos = res.data)
         .catch(err => console.log(err));
     }
