@@ -34,7 +34,8 @@ export default {
     created() {
       axios
         .get('https://jsonplaceholder.typicode.com/todos')
-        .then(response => (this.todos = response));
+        .then(res => this.todos = res.data)
+        .catch(err => console.log(err));
     }
   }
 }
